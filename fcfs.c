@@ -77,8 +77,7 @@ int main()
    }
   }
  for(i=0;i<n;i++)
-  printf("%d ",p[i].no); 
-    getch();    
+  printf("%d ",p[i].no);    
  return 0;
 }
  
