@@ -27,24 +27,14 @@ int main()
     if ((shm = shmat(shmid, NULL, 0)) == (char *) -1)
         die("shmat");
 
-    /*
-     *      * Put some things into the memory for the
-     *        other process to read.
-     *        */
     s = shm;
-
+    printf("Sending Message to Client\n");
     for (c = 'a'; c <= 'z'; c++)
         *s++ = c;
 
-
-    /*
-     * Wait until the other process
-     * changes the first character of our memory
-     * to '*', indicating that it has read what
-     * we put there.
-     */
+    printf("Waiting for client to read the message sent\n");
     while (*shm != '*')
         sleep(1);
-
+    printf("Client finished reading the message");
     exit(0);
 }

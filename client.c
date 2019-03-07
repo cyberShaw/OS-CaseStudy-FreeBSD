@@ -26,16 +26,10 @@ int main()
     if ((shm = shmat(shmid, NULL, 0)) == (char *) -1)
         die("shmat");
 
-    //Now read what the server put in the memory.
     for (s = shm; *s != '\0'; s++)
         putchar(*s);
     putchar('\n');
-
-    /*
-     *Change the first character of the
-     *segment to '*', indicating we have read
-     *the segment.
-     */
+    printf("Message Recieved and Processed");
     *shm = '*';
 
     exit(0);
