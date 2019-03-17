@@ -1,1 +1,1 @@
-K A N G
+Various implementation and algorithms used to studying FreeBSD. Includes IPC, Scheduling Algorithms and more.
