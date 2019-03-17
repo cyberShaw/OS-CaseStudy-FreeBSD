@@ -19,25 +19,25 @@ queue<int> q;  //RR queue
 
 void RR()
 {
-      if(!q.empty())
-      {
-      	if(rt[q.front()]>0 && qt[q.front()]<4)
-      	{
-          		qt[q.front()]++;
-          		rt[q.front()]--;
-          		if(rt[q.front()]==0)
-          		{
-            	ft[q.front()]=tms+1;
-            	q.pop();
-          		}
-          		if(rt[q.front()]!=0 && qt[q.front()]==4)
-          		{
-				qt[q.front()]=0;
-				q.push(q.front());
-				q.pop();
-          		}
-        	}
-      }
+	if(!q.empty())
+	{
+		if(rt[q.front()]>0 && qt[q.front()]<4)
+		{
+					qt[q.front()]++;
+					rt[q.front()]--;
+					if(rt[q.front()]==0)
+					{
+					ft[q.front()]=tms+1;
+					q.pop();
+					}
+					if(rt[q.front()]!=0 && qt[q.front()]==4)
+					{
+		qt[q.front()]=0;
+		q.push(q.front());
+		q.pop();
+					}
+			}
+	}
 }
 
 int main()
